@@ -1,0 +1,140 @@
+# ====================================
+# Dependencies
+# ====================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# ====================================
+# Environment Variables
+# ====================================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# ====================================
+# Build Output
+# ====================================
+dist/
+build/
+*.js.map
+*.d.ts.map
+
+# ====================================
+# Logs
+# ====================================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# ====================================
+# Testing
+# ====================================
+coverage/
+.nyc_output/
+*.lcov
+.jest/
+
+# ====================================
+# IDE & Editors
+# ====================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+*~
+.DS_Store
+.history/
+*.sublime-workspace
+*.sublime-project
+
+# ====================================
+# OS Files
+# ====================================
+Thumbs.db
+Desktop.ini
+
+# ====================================
+# Temporary Files
+# ====================================
+*.tmp
+*.temp
+.cache/
+tmp/
+temp/
+
+# ====================================
+# Upload Directories
+# ====================================
+uploads/
+public/uploads/
+storage/
+
+# ====================================
+# Database
+# ====================================
+*.sqlite
+*.sqlite3
+*.db
+
+# ====================================
+# Redis Dump
+# ====================================
+dump.rdb
+
+# ====================================
+# PM2
+# ====================================
+.pm2/
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# ====================================
+# Docker
+# ====================================
+.dockerignore
+docker-compose.override.yml
+
+# ====================================
+# Misc
+# ====================================
+.eslintcache
+.stylelintcache
+.parcel-cache/
+.next/
+.nuxt/
+.vercel
+.serverless/
+.fusebox/
+.dynamodb/
+.tern-port
+
+# ====================================
+# Security
+# ====================================
+*.pem
+*.key
+*.cert
+*.crt
+secrets/
+
+# ====================================
+# Backup Files
+# ====================================
+*.backup
+*.bak
+*.old
+backups/
