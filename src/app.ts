@@ -16,6 +16,7 @@ import { ApiError } from './utils/apiError';
 
 // Import routes
 import authRoutes from './routes/auth.routes';
+import groupRoutes from './routes/group.routes'; // 👈 NEW
 
 const app: Application = express();
 
@@ -63,6 +64,7 @@ app.get('/health', (_req: Request, res: Response) => {
 const API_VERSION = process.env.API_VERSION || 'v1';
 
 app.use(`/api/${API_VERSION}/auth`, authRoutes);
+app.use(`/api/${API_VERSION}/groups`, groupRoutes); // 👈 NEW
 
 /**
  * Root Route
@@ -75,6 +77,7 @@ app.get('/', (_req: Request, res: Response) => {
     endpoints: {
       health: '/health',
       auth: `/api/${API_VERSION}/auth`,
+      groups: `/api/${API_VERSION}/groups`, // 👈 NEW
     },
   });
 });
