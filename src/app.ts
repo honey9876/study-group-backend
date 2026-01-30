@@ -1,263 +1,151 @@
 /**
  * ====================================
- * APP.TS - EXPRESS APPLICATION SETUP
+ * EXPRESS APPLICATION SETUP
  * ====================================
- * Configures Express app with middleware,
- * security, and routes
+ * Main Express application configuration
  */
 
 import express, { Application, Request, Response, NextFunction } from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
-import compression from 'compression';
-import cookieParser from 'cookie-parser';
-import mongoSanitize from 'express-mongo-sanitize';
-import hpp from 'hpp';
-import { ApiResponse } from './utils/apiResponse';
+import morgan from 'morgan';
+import { HttpStatus } from './enums/HttpStatus.enum';
+import { errorResponse } from './utils/apiResponse';
+import logger, { logStream } from './utils/logger';
 import { ApiError } from './utils/apiError';
-import logger from './utils/logger';
 
-// Initialize Express app
+// Import routes
+import authRoutes from './routes/auth.routes';
+
 const app: Application = express();
 
 /**
- * ====================================
- * SECURITY MIDDLEWARE
- * ====================================
+ * Security Middleware
  */
+app.use(helmet()); // Security headers
+app.use(
+  cors({
+    origin: process.env.CORS_ORIGIN?.split(',') || '*',
+    credentials: true,
+  })
+);
 
-// Helmet - Security headers
-if (process.env.ENABLE_HELMET === 'true') {
-  app.use(helmet({
-    contentSecurityPolicy: {
-      directives: {
-        defaultSrc: ["'self'"],
-        styleSrc: ["'self'", "'unsafe-inline'"],
-        scriptSrc: ["'self'"],
-        imgSrc: ["'self'", 'data:', 'https:'],
-      },
-    },
-    crossOriginEmbedderPolicy: false,
-    crossOriginResourcePolicy: { policy: 'cross-origin' },
-  }));
-}
+/**
+ * Body Parser Middleware
+ */
+app.use(express.json({ limit: '10mb' }));
+app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 
-// CORS Configuration
-const corsOptions = {
-  origin: (origin: string | undefined, callback: Function) => {
-    const allowedOrigins = process.env.ALLOWED_ORIGINS?.split(',') || ['http://localhost:3000'];
-    
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
-  credentials: true,
-  optionsSuccessStatus: 200,
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
-};
-
-if (process.env.ENABLE_CORS === 'true') {
-  app.use(cors(corsOptions));
-}
-
-// Compression - Compress responses
-app.use(compression());
-
-// Trust proxy (for production behind reverse proxy)
-if (process.env.TRUST_PROXY === 'true') {
-  app.set('trust proxy', 1);
+/**
+ * Logging Middleware
+ */
+if (process.env.NODE_ENV === 'development') {
+  app.use(morgan('dev'));
+} else {
+  app.use(morgan('combined', { stream: logStream }));
 }
 
 /**
- * ====================================
- * BODY PARSING MIDDLEWARE
- * ====================================
+ * Health Check Route
  */
-
-// Parse JSON bodies
-app.use(express.json({ 
-  limit: '10mb',
-  strict: true,
-}));
-
-// Parse URL-encoded bodies
-app.use(express.urlencoded({ 
-  extended: true, 
-  limit: '10mb',
-}));
-
-// Cookie parser
-app.use(cookieParser());
-
-/**
- * ====================================
- * DATA SANITIZATION MIDDLEWARE
- * ====================================
- */
-
-// Sanitize data against NoSQL injection
-app.use(mongoSanitize({
-  replaceWith: '_',
-  onSanitize: ({ req, key }) => {
-    logger.warn(`Sanitized request from ${req.ip}: ${key}`);
-  },
-}));
-
-// Prevent HTTP Parameter Pollution
-app.use(hpp({
-  whitelist: ['sort', 'fields', 'page', 'limit'], // Allow these params to have duplicates
-}));
-
-/**
- * ====================================
- * LOGGING MIDDLEWARE
- * ====================================
- */
-
-// Request logger
-app.use((req: Request, res: Response, next: NextFunction) => {
-  const start = Date.now();
-  
-  res.on('finish', () => {
-    const duration = Date.now() - start;
-    const logMessage = `${req.method} ${req.originalUrl} ${res.statusCode} ${duration}ms - ${req.ip}`;
-    
-    if (res.statusCode >= 400) {
-      logger.error(logMessage);
-    } else {
-      logger.http(logMessage);
-    }
-  });
-  
-  next();
-});
-
-/**
- * ====================================
- * HEALTH CHECK ROUTE
- * ====================================
- */
-
-app.get('/health', (req: Request, res: Response) => {
-  const healthCheck = {
-    status: 'UP',
+app.get('/health', (_req: Request, res: Response) => {
+  res.status(200).json({
+    success: true,
+    message: 'Server is healthy',
     timestamp: new Date().toISOString(),
     uptime: process.uptime(),
-    environment: process.env.NODE_ENV,
-    mongodb: 'Connected', // Will be updated when DB connection is implemented
-    memory: {
-      used: Math.round(process.memoryUsage().heapUsed / 1024 / 1024),
-      total: Math.round(process.memoryUsage().heapTotal / 1024 / 1024),
+  });
+});
+
+/**
+ * API Routes
+ */
+const API_VERSION = process.env.API_VERSION || 'v1';
+
+app.use(`/api/${API_VERSION}/auth`, authRoutes);
+
+/**
+ * Root Route
+ */
+app.get('/', (_req: Request, res: Response) => {
+  res.status(200).json({
+    success: true,
+    message: 'Study Group API',
+    version: API_VERSION,
+    endpoints: {
+      health: '/health',
+      auth: `/api/${API_VERSION}/auth`,
     },
-  };
-
-  return ApiResponse.success(res, healthCheck, 'Health check passed');
+  });
 });
 
 /**
- * ====================================
- * API WELCOME ROUTE
- * ====================================
+ * 404 Not Found Handler
  */
-
-app.get('/', (req: Request, res: Response) => {
-  return ApiResponse.success(res, {
-    message: 'Welcome to Study Group API',
-    version: process.env.API_VERSION || 'v1',
-    documentation: '/api/docs',
-    health: '/health',
-  }, 'API is running');
+app.use((req: Request, res: Response) => {
+  return errorResponse(
+    res,
+    `Route ${req.originalUrl} not found`,
+    HttpStatus.NOT_FOUND
+  );
 });
 
 /**
- * ====================================
- * API ROUTES (Will be added in later phases)
- * ====================================
+ * Global Error Handler
  */
-
-// API base path
-const API_BASE = `/api/${process.env.API_VERSION || 'v1'}`;
-
-// TODO: Add routes here in Phase 2+
-// app.use(`${API_BASE}/auth`, authRoutes);
-// app.use(`${API_BASE}/groups`, groupRoutes);
-// ... more routes
-
-/** 
- * ====================================
- * 404 HANDLER - Route not found
- * ====================================
- */
-
-app.use((req: Request, res: Response, next: NextFunction) => {
-  const error = new ApiError(404, `Route ${req.originalUrl} not found`);
-  next(error);
-});
-
-/**
- * ====================================
- * GLOBAL ERROR HANDLER
- * ====================================
- */
-
-app.use((err: any, req: Request, res: Response, next: NextFunction) => {
-  // Set default values
-  err.statusCode = err.statusCode || 500;
-  err.message = err.message || 'Internal Server Error';
-
-  // Log error
+app.use((err: any, req: Request, res: Response, _next: NextFunction) => {
   logger.error('Error:', {
     message: err.message,
     stack: err.stack,
-    statusCode: err.statusCode,
     path: req.path,
     method: req.method,
   });
 
-  // Mongoose validation error
+  // Handle ApiError instances
+  if (err instanceof ApiError) {
+    return errorResponse(res, err.message, err.statusCode, err.errors);
+  }
+
+  // Handle Mongoose validation errors
   if (err.name === 'ValidationError') {
     const errors = Object.values(err.errors).map((e: any) => e.message);
-    err.message = `Invalid input data: ${errors.join(', ')}`;
-    err.statusCode = 400;
+    return errorResponse(
+      res,
+      'Validation failed',
+      HttpStatus.UNPROCESSABLE_ENTITY,
+      errors
+    );
   }
 
-  // Mongoose duplicate key error
+  // Handle Mongoose duplicate key error
   if (err.code === 11000) {
     const field = Object.keys(err.keyPattern)[0];
-    err.message = `Duplicate value for field: ${field}`;
-    err.statusCode = 400;
+    return errorResponse(
+      res,
+      `${field} already exists`,
+      HttpStatus.CONFLICT
+    );
   }
 
-  // Mongoose cast error
-  if (err.name === 'CastError') {
-    err.message = `Invalid ${err.path}: ${err.value}`;
-    err.statusCode = 400;
-  }
-
-  // JWT errors
+  // Handle JWT errors
   if (err.name === 'JsonWebTokenError') {
-    err.message = 'Invalid token. Please login again';
-    err.statusCode = 401;
+    return errorResponse(res, 'Invalid token', HttpStatus.UNAUTHORIZED);
   }
 
   if (err.name === 'TokenExpiredError') {
-    err.message = 'Token expired. Please login again';
-    err.statusCode = 401;
+    return errorResponse(
+      res,
+      'Token has expired',
+      HttpStatus.UNAUTHORIZED
+    );
   }
 
-  // Send error response
-  return res.status(err.statusCode).json({
-    success: false,
-    statusCode: err.statusCode,
-    message: err.message,
-    ...(process.env.NODE_ENV === 'development' && { 
-      stack: err.stack,
-      error: err,
-    }),
-  });
+  // Default error
+  return errorResponse(
+    res,
+    err.message || 'Internal server error',
+    err.statusCode || HttpStatus.INTERNAL_SERVER_ERROR
+  );
 });
 
 export default app;

@@ -20,7 +20,7 @@ const PORT = process.env.PORT || 5000;
 const NODE_ENV = process.env.NODE_ENV || 'development';
 
 // Store server instance
-let server: Server;
+let server: Server | null = null;
 
 /**
  * Start the server
@@ -108,5 +108,3 @@ process.on('unhandledRejection', (reason: any) => {
 
 // Start the server
 startServer();
-
-export default server;
