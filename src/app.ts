@@ -186,7 +186,7 @@ const API_BASE = `/api/${process.env.API_VERSION || 'v1'}`;
 // app.use(`${API_BASE}/groups`, groupRoutes);
 // ... more routes
 
-/**
+/** 
  * ====================================
  * 404 HANDLER - Route not found
  * ====================================
