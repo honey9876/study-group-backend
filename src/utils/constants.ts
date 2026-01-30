@@ -9,8 +9,8 @@
  * Authentication Constants
  */
 export const AUTH_CONSTANTS = {
-  JWT_EXPIRE: '7d',
-  REFRESH_TOKEN_EXPIRE: '30d',
+  JWT_EXPIRE: '7d' as const,
+  REFRESH_TOKEN_EXPIRE: '30d' as const,
   BCRYPT_SALT_ROUNDS: 12,
   PASSWORD_MIN_LENGTH: 6,
   PASSWORD_MAX_LENGTH: 128,
@@ -20,7 +20,7 @@ export const AUTH_CONSTANTS = {
     RESET_PASSWORD: 'reset_password',
     EMAIL_VERIFICATION: 'email_verification',
   },
-};
+} as const;
 
 /**
  * Pagination Constants

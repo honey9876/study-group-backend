@@ -1,19 +1,35 @@
 /**
  * ====================================
- * USER MODEL (UPDATED - COMPATIBLE)
+ * USER MODEL (FINAL - CLEAN VERSION)
  * ====================================
  * Mongoose schema and model for User
  * Compatible with existing MongoDB data
  */
 
-import mongoose, { Schema } from 'mongoose';
+import mongoose, { Schema, Model, Document } from 'mongoose';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import { IUser } from '../interfaces/IUser';
 import { UserRole } from '../enums/UserRole.enum';
 import { AUTH_CONSTANTS } from '../utils/constants';
 
-const userSchema = new Schema<IUser>(
+// Define the interface for instance methods
+interface IUserMethods {
+  comparePassword(candidatePassword: string): Promise<boolean>;
+  generateAuthToken(): string;
+  generateRefreshToken(): string;
+}
+
+// Define the interface for static methods
+interface IUserStatics {
+  findByEmail(email: string): Promise<(IUser & Document) | null>;
+  findByUsername(username: string): Promise<(IUser & Document) | null>;
+}
+
+// Define the model type
+type UserModel = Model<IUser, {}, IUserMethods> & IUserStatics;
+
+const userSchema = new Schema<IUser, UserModel, IUserMethods>(
   {
     // Core fields (matching your existing data)
     name: {
@@ -26,7 +42,6 @@ const userSchema = new Schema<IUser>(
     email: {
       type: String,
       required: [true, 'Email is required'],
-      unique: true,
       lowercase: true,
       trim: true,
       match: [
@@ -36,7 +51,6 @@ const userSchema = new Schema<IUser>(
     },
     username: {
       type: String,
-      unique: true,
       sparse: true, // Allow null/undefined for backward compatibility
       trim: true,
       lowercase: true,
@@ -78,11 +92,6 @@ const userSchema = new Schema<IUser>(
       type: Date,
       default: Date.now,
     },
-    // Support for legacy userId field (if exists)
-    userId: {
-      type: String,
-      select: false,
-    },
   },
   {
     timestamps: true,
@@ -90,7 +99,6 @@ const userSchema = new Schema<IUser>(
       transform: function (_doc, ret) {
         delete (ret as any).password;
         delete (ret as any).__v;
-        delete (ret as any).userId; // Remove internal userId field
         return ret;
       },
     },
@@ -98,7 +106,6 @@ const userSchema = new Schema<IUser>(
       transform: function (_doc, ret) {
         delete (ret as any).password;
         delete (ret as any).__v;
-        delete (ret as any).userId;
         return ret;
       },
     },
@@ -108,8 +115,8 @@ const userSchema = new Schema<IUser>(
 /**
  * Indexes
  */
-userSchema.index({ email: 1 });
-userSchema.index({ username: 1 }, { sparse: true });
+userSchema.index({ email: 1 }, { unique: true });
+userSchema.index({ username: 1 }, { unique: true, sparse: true });
 userSchema.index({ role: 1 });
 userSchema.index({ isActive: 1 });
 userSchema.index({ createdAt: -1 });
@@ -137,8 +144,8 @@ userSchema.pre('save', async function (next) {
  */
 userSchema.pre('save', function (next) {
   if (!this.username && this.email) {
-    // Generate username from email (before @)
-    this.username = this.email.split('@')[0].toLowerCase();
+    const emailParts = this.email.split('@');
+    this.username = emailParts[0]?.toLowerCase() || '';
   }
   next();
 });
@@ -206,6 +213,6 @@ userSchema.statics.findByUsername = function (username: string) {
   return this.findOne({ username: username.toLowerCase() });
 };
 
-const User = mongoose.model<IUser>('User', userSchema);
+const User = mongoose.model<IUser, UserModel>('User', userSchema);
 
 export default User;

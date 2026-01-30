@@ -115,3 +115,80 @@
 {"level":"info","message":"📊 Health Check: http://localhost:5000/health","timestamp":"2026-01-30 10:53:15"}
 {"level":"info","message":"==================================================","timestamp":"2026-01-30 10:53:15"}
 {"level":"info","message":"\n⚠️  SIGINT signal received: Closing server gracefully","timestamp":"2026-01-30 10:54:03"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-30 12:17:31"}
+{"level":"info","message":"✅ MongoDB Connected Successfully","timestamp":"2026-01-30 12:17:31"}
+{"level":"info","message":"📦 Database: study-group-db","timestamp":"2026-01-30 12:17:31"}
+{"level":"info","message":"🌐 Host: cluster0-shard-00-00.me7m5.mongodb.net","timestamp":"2026-01-30 12:17:31"}
+{"level":"info","message":"🔌 Port: 27017","timestamp":"2026-01-30 12:17:31"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-30 12:17:31"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-30 12:17:31"}
+{"level":"info","message":"🚀 Server is running in DEVELOPMENT mode","timestamp":"2026-01-30 12:17:31"}
+{"level":"info","message":"📡 Server listening on port 5000","timestamp":"2026-01-30 12:17:31"}
+{"level":"info","message":"🌐 API Base URL: http://localhost:5000/api/v1","timestamp":"2026-01-30 12:17:31"}
+{"level":"info","message":"📊 Health Check: http://localhost:5000/health","timestamp":"2026-01-30 12:17:31"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-30 12:17:31"}
+{"level":"info","message":"\n⚠️  SIGINT signal received: Closing server gracefully","timestamp":"2026-01-30 12:19:29"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-30 12:19:33"}
+{"level":"info","message":"✅ MongoDB Connected Successfully","timestamp":"2026-01-30 12:19:33"}
+{"level":"info","message":"📦 Database: study-group-db","timestamp":"2026-01-30 12:19:33"}
+{"level":"info","message":"🌐 Host: cluster0-shard-00-02.me7m5.mongodb.net","timestamp":"2026-01-30 12:19:33"}
+{"level":"info","message":"🔌 Port: 27017","timestamp":"2026-01-30 12:19:33"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-30 12:19:33"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-30 12:19:33"}
+{"level":"info","message":"🚀 Server is running in DEVELOPMENT mode","timestamp":"2026-01-30 12:19:33"}
+{"level":"info","message":"📡 Server listening on port 5000","timestamp":"2026-01-30 12:19:33"}
+{"level":"info","message":"🌐 API Base URL: http://localhost:5000/api/v1","timestamp":"2026-01-30 12:19:33"}
+{"level":"info","message":"📊 Health Check: http://localhost:5000/health","timestamp":"2026-01-30 12:19:33"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-30 12:19:33"}
+{"level":"info","message":"\n⚠️  SIGINT signal received: Closing server gracefully","timestamp":"2026-01-30 12:20:11"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-30 12:20:18"}
+{"level":"info","message":"✅ MongoDB Connected Successfully","timestamp":"2026-01-30 12:20:18"}
+{"level":"info","message":"📦 Database: study-group-db","timestamp":"2026-01-30 12:20:18"}
+{"level":"info","message":"🌐 Host: cluster0-shard-00-00.me7m5.mongodb.net","timestamp":"2026-01-30 12:20:18"}
+{"level":"info","message":"🔌 Port: 27017","timestamp":"2026-01-30 12:20:18"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-30 12:20:18"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-30 12:20:18"}
+{"level":"info","message":"🚀 Server is running in DEVELOPMENT mode","timestamp":"2026-01-30 12:20:18"}
+{"level":"info","message":"📡 Server listening on port 5000","timestamp":"2026-01-30 12:20:18"}
+{"level":"info","message":"🌐 API Base URL: http://localhost:5000/api/v1","timestamp":"2026-01-30 12:20:18"}
+{"level":"info","message":"📊 Health Check: http://localhost:5000/health","timestamp":"2026-01-30 12:20:18"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-30 12:20:18"}
+{"level":"info","message":"\n⚠️  SIGINT signal received: Closing server gracefully","timestamp":"2026-01-30 12:20:45"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-30 12:20:58"}
+{"level":"info","message":"✅ MongoDB Connected Successfully","timestamp":"2026-01-30 12:20:58"}
+{"level":"info","message":"📦 Database: study-group-db","timestamp":"2026-01-30 12:20:58"}
+{"level":"info","message":"🌐 Host: cluster0-shard-00-01.me7m5.mongodb.net","timestamp":"2026-01-30 12:20:58"}
+{"level":"info","message":"🔌 Port: 27017","timestamp":"2026-01-30 12:20:58"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-30 12:20:58"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-30 12:20:58"}
+{"level":"info","message":"🚀 Server is running in DEVELOPMENT mode","timestamp":"2026-01-30 12:20:58"}
+{"level":"info","message":"📡 Server listening on port 5000","timestamp":"2026-01-30 12:20:58"}
+{"level":"info","message":"🌐 API Base URL: http://localhost:5000/api/v1","timestamp":"2026-01-30 12:20:58"}
+{"level":"info","message":"📊 Health Check: http://localhost:5000/health","timestamp":"2026-01-30 12:20:58"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-30 12:20:58"}
+{"level":"info","message":"\n⚠️  SIGINT signal received: Closing server gracefully","timestamp":"2026-01-30 12:23:24"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-30 12:24:22"}
+{"level":"info","message":"✅ MongoDB Connected Successfully","timestamp":"2026-01-30 12:24:22"}
+{"level":"info","message":"📦 Database: study-group-db","timestamp":"2026-01-30 12:24:22"}
+{"level":"info","message":"🌐 Host: cluster0-shard-00-02.me7m5.mongodb.net","timestamp":"2026-01-30 12:24:22"}
+{"level":"info","message":"🔌 Port: 27017","timestamp":"2026-01-30 12:24:22"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-30 12:24:22"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-30 12:24:22"}
+{"level":"info","message":"🚀 Server is running in DEVELOPMENT mode","timestamp":"2026-01-30 12:24:22"}
+{"level":"info","message":"📡 Server listening on port 5000","timestamp":"2026-01-30 12:24:22"}
+{"level":"info","message":"🌐 API Base URL: http://localhost:5000/api/v1","timestamp":"2026-01-30 12:24:22"}
+{"level":"info","message":"📊 Health Check: http://localhost:5000/health","timestamp":"2026-01-30 12:24:22"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-30 12:24:22"}
+{"level":"info","message":"\n⚠️  SIGINT signal received: Closing server gracefully","timestamp":"2026-01-30 12:27:14"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-30 12:27:23"}
+{"level":"info","message":"✅ MongoDB Connected Successfully","timestamp":"2026-01-30 12:27:23"}
+{"level":"info","message":"📦 Database: study-group-db","timestamp":"2026-01-30 12:27:23"}
+{"level":"info","message":"🌐 Host: cluster0-shard-00-00.me7m5.mongodb.net","timestamp":"2026-01-30 12:27:23"}
+{"level":"info","message":"🔌 Port: 27017","timestamp":"2026-01-30 12:27:23"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-30 12:27:23"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-30 12:27:23"}
+{"level":"info","message":"🚀 Server is running in DEVELOPMENT mode","timestamp":"2026-01-30 12:27:23"}
+{"level":"info","message":"📡 Server listening on port 5000","timestamp":"2026-01-30 12:27:23"}
+{"level":"info","message":"🌐 API Base URL: http://localhost:5000/api/v1","timestamp":"2026-01-30 12:27:23"}
+{"level":"info","message":"📊 Health Check: http://localhost:5000/health","timestamp":"2026-01-30 12:27:23"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-30 12:27:23"}
