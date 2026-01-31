@@ -18,6 +18,7 @@ import { ApiError } from './utils/apiError';
 import authRoutes from './routes/auth.routes';
 import groupRoutes from './routes/group.routes';
 import memberRoutes from './routes/member.routes'; // 👈 NEW - Phase 4
+import searchRoutes from './routes/search.routes';
 
 const app: Application = express();
 
@@ -67,6 +68,7 @@ const API_VERSION = process.env.API_VERSION || 'v1';
 app.use(`/api/${API_VERSION}/auth`, authRoutes);
 app.use(`/api/${API_VERSION}/groups`, groupRoutes);
 app.use(`/api/${API_VERSION}/groups`, memberRoutes); // 👈 NEW - Phase 4 Member Management
+app.use(`/api/${API_VERSION}/search`, searchRoutes);
 
 /**
  * Root Route
