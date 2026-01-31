@@ -17,7 +17,7 @@ import { ApiError } from './utils/apiError';
 // Import routes
 import authRoutes from './routes/auth.routes';
 import groupRoutes from './routes/group.routes';
-import memberRoutes from './routes/member.routes'; // 👈 NEW - Phase 4
+import memberRoutes from './routes/member.routes'; 
 import searchRoutes from './routes/search.routes';
 // Add this import at top
 import chatRoutes from './routes/chat.routes';
