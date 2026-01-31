@@ -38,6 +38,11 @@ const startServer = async (): Promise<void> => {
       logger.info(`🌐 API Base URL: http://localhost:${PORT}/api/v1`);
       logger.info(`📊 Health Check: http://localhost:${PORT}/health`);
       logger.info('='.repeat(50));
+      logger.info('📋 Available Routes:');
+      logger.info(`   Auth: /api/v1/auth`);
+      logger.info(`   Groups: /api/v1/groups`);
+      logger.info(`   Members: /api/v1/groups/:groupId/join`);
+      logger.info('='.repeat(50));
     });
 
     // Handle server errors

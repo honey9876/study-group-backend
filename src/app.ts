@@ -16,7 +16,8 @@ import { ApiError } from './utils/apiError';
 
 // Import routes
 import authRoutes from './routes/auth.routes';
-import groupRoutes from './routes/group.routes'; // 👈 NEW
+import groupRoutes from './routes/group.routes';
+import memberRoutes from './routes/member.routes'; // 👈 NEW - Phase 4
 
 const app: Application = express();
 
@@ -64,7 +65,8 @@ app.get('/health', (_req: Request, res: Response) => {
 const API_VERSION = process.env.API_VERSION || 'v1';
 
 app.use(`/api/${API_VERSION}/auth`, authRoutes);
-app.use(`/api/${API_VERSION}/groups`, groupRoutes); // 👈 NEW
+app.use(`/api/${API_VERSION}/groups`, groupRoutes);
+app.use(`/api/${API_VERSION}/groups`, memberRoutes); // 👈 NEW - Phase 4 Member Management
 
 /**
  * Root Route
@@ -77,7 +79,8 @@ app.get('/', (_req: Request, res: Response) => {
     endpoints: {
       health: '/health',
       auth: `/api/${API_VERSION}/auth`,
-      groups: `/api/${API_VERSION}/groups`, // 👈 NEW
+      groups: `/api/${API_VERSION}/groups`,
+      members: `/api/${API_VERSION}/groups/:groupId/join`, // 👈 Example member endpoint
     },
   });
 });

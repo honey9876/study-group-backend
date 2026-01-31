@@ -192,3 +192,221 @@
 {"level":"info","message":"🌐 API Base URL: http://localhost:5000/api/v1","timestamp":"2026-01-30 12:27:23"}
 {"level":"info","message":"📊 Health Check: http://localhost:5000/health","timestamp":"2026-01-30 12:27:23"}
 {"level":"info","message":"==================================================","timestamp":"2026-01-30 12:27:23"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-30 17:48:46"}
+{"level":"info","message":"✅ MongoDB Connected Successfully","timestamp":"2026-01-30 17:48:46"}
+{"level":"info","message":"📦 Database: study-group-db","timestamp":"2026-01-30 17:48:46"}
+{"level":"info","message":"🌐 Host: cluster0-shard-00-01.me7m5.mongodb.net","timestamp":"2026-01-30 17:48:46"}
+{"level":"info","message":"🔌 Port: 27017","timestamp":"2026-01-30 17:48:46"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-30 17:48:46"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-30 17:48:46"}
+{"level":"info","message":"🚀 Server is running in DEVELOPMENT mode","timestamp":"2026-01-30 17:48:46"}
+{"level":"info","message":"📡 Server listening on port 5000","timestamp":"2026-01-30 17:48:46"}
+{"level":"info","message":"🌐 API Base URL: http://localhost:5000/api/v1","timestamp":"2026-01-30 17:48:46"}
+{"level":"info","message":"📊 Health Check: http://localhost:5000/health","timestamp":"2026-01-30 17:48:46"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-30 17:48:46"}
+{"level":"warn","message":"⚠️  Mongoose disconnected from DB","timestamp":"2026-01-30 18:42:37"}
+{"level":"info","message":"✅ Mongoose connected to DB","timestamp":"2026-01-30 18:42:37"}
+{"level":"warn","message":"⚠️  Mongoose disconnected from DB","timestamp":"2026-01-30 18:51:27"}
+{"level":"info","message":"✅ Mongoose connected to DB","timestamp":"2026-01-30 18:51:27"}
+{"level":"warn","message":"⚠️  Mongoose disconnected from DB","timestamp":"2026-01-30 19:04:56"}
+{"level":"info","message":"✅ Mongoose connected to DB","timestamp":"2026-01-30 19:04:56"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-31 10:08:59"}
+{"level":"info","message":"✅ MongoDB Connected Successfully","timestamp":"2026-01-31 10:08:59"}
+{"level":"info","message":"📦 Database: study-group-db","timestamp":"2026-01-31 10:08:59"}
+{"level":"info","message":"🌐 Host: cluster0-shard-00-02.me7m5.mongodb.net","timestamp":"2026-01-31 10:08:59"}
+{"level":"info","message":"🔌 Port: 27017","timestamp":"2026-01-31 10:08:59"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-31 10:08:59"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-31 10:08:59"}
+{"level":"info","message":"🚀 Server is running in DEVELOPMENT mode","timestamp":"2026-01-31 10:08:59"}
+{"level":"info","message":"📡 Server listening on port 5000","timestamp":"2026-01-31 10:08:59"}
+{"level":"info","message":"🌐 API Base URL: http://localhost:5000/api/v1","timestamp":"2026-01-31 10:08:59"}
+{"level":"info","message":"📊 Health Check: http://localhost:5000/health","timestamp":"2026-01-31 10:08:59"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-31 10:08:59"}
+{"level":"error","message":"Invalid or expired refresh token","method":"POST","path":"/api/v1/auth/refresh","stack":"Error: Invalid or expired refresh token\n    at Object.refreshAccessToken (C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\src\\services\\auth.service.ts:269:11)\n    at C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\src\\controllers\\auth.controller.ts:147:38\n    at C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\src\\utils\\asyncHandler.ts:16:21\n    at Layer.handle [as handle_request] (C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\node_modules\\express\\lib\\router\\index.js:284:15\n    at Function.process_params (C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\node_modules\\express\\lib\\router\\index.js:346:12)\n    at next (C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\node_modules\\express\\lib\\router\\index.js:280:10)","timestamp":"2026-01-31 10:09:36"}
+{"level":"error","message":"Expected ',' or '}' after property value in JSON at position 228 (line 9 column 1)","method":"POST","path":"/api/v1/groups","stack":"SyntaxError: Expected ',' or '}' after property value in JSON at position 228 (line 9 column 1)\n    at JSON.parse (<anonymous>)\n    at parse (C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\node_modules\\body-parser\\lib\\types\\json.js:92:19)\n    at C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\node_modules\\body-parser\\lib\\read.js:128:18\n    at AsyncResource.runInAsyncScope (node:async_hooks:211:14)\n    at invokeCallback (C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\node_modules\\raw-body\\index.js:238:16)\n    at done (C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\node_modules\\raw-body\\index.js:227:7)\n    at IncomingMessage.onEnd (C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\node_modules\\raw-body\\index.js:287:7)\n    at IncomingMessage.emit (node:events:518:28)\n    at IncomingMessage.emit (node:domain:489:12)\n    at endReadableNT (node:internal/streams/readable:1698:12)","timestamp":"2026-01-31 10:14:41"}
+{"level":"error","message":"Invalid token format","method":"POST","path":"/api/v1/groups","stack":"Error: Invalid token format\n    at C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\src\\middlewares\\auth.middleware.ts:41:13\n    at C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\src\\utils\\asyncHandler.ts:16:21\n    at Layer.handle [as handle_request] (C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\node_modules\\express\\lib\\router\\index.js:284:15\n    at Function.process_params (C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\node_modules\\express\\lib\\router\\index.js:346:12)\n    at next (C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\node_modules\\express\\lib\\router\\index.js:280:10)\n    at Function.handle (C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\node_modules\\express\\lib\\router\\index.js:175:3)","timestamp":"2026-01-31 10:15:07"}
+{"level":"info","message":"\n⚠️  SIGINT signal received: Closing server gracefully","timestamp":"2026-01-31 10:17:52"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-31 10:17:59"}
+{"level":"info","message":"✅ MongoDB Connected Successfully","timestamp":"2026-01-31 10:17:59"}
+{"level":"info","message":"📦 Database: study-group-db","timestamp":"2026-01-31 10:17:59"}
+{"level":"info","message":"🌐 Host: cluster0-shard-00-00.me7m5.mongodb.net","timestamp":"2026-01-31 10:17:59"}
+{"level":"info","message":"🔌 Port: 27017","timestamp":"2026-01-31 10:17:59"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-31 10:17:59"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-31 10:17:59"}
+{"level":"info","message":"🚀 Server is running in DEVELOPMENT mode","timestamp":"2026-01-31 10:17:59"}
+{"level":"info","message":"📡 Server listening on port 5000","timestamp":"2026-01-31 10:17:59"}
+{"level":"info","message":"🌐 API Base URL: http://localhost:5000/api/v1","timestamp":"2026-01-31 10:17:59"}
+{"level":"info","message":"📊 Health Check: http://localhost:5000/health","timestamp":"2026-01-31 10:17:59"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-31 10:17:59"}
+{"level":"error","message":"Invalid group ID","method":"GET","path":"/api/v1/groups/my-groups","stack":"Error: Invalid group ID\n    at C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\src\\controllers\\group.controller.ts:87:11\n    at C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\src\\utils\\asyncHandler.ts:16:21\n    at Layer.handle [as handle_request] (C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\src\\middlewares\\auth.middleware.ts:137:5\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)","timestamp":"2026-01-31 10:19:53"}
+{"level":"info","message":"\n⚠️  SIGINT signal received: Closing server gracefully","timestamp":"2026-01-31 10:22:13"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-31 10:22:23"}
+{"level":"info","message":"✅ MongoDB Connected Successfully","timestamp":"2026-01-31 10:22:23"}
+{"level":"info","message":"📦 Database: study-group-db","timestamp":"2026-01-31 10:22:23"}
+{"level":"info","message":"🌐 Host: cluster0-shard-00-02.me7m5.mongodb.net","timestamp":"2026-01-31 10:22:23"}
+{"level":"info","message":"🔌 Port: 27017","timestamp":"2026-01-31 10:22:23"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-31 10:22:23"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-31 10:22:23"}
+{"level":"info","message":"🚀 Server is running in DEVELOPMENT mode","timestamp":"2026-01-31 10:22:23"}
+{"level":"info","message":"📡 Server listening on port 5000","timestamp":"2026-01-31 10:22:23"}
+{"level":"info","message":"🌐 API Base URL: http://localhost:5000/api/v1","timestamp":"2026-01-31 10:22:23"}
+{"level":"info","message":"📊 Health Check: http://localhost:5000/health","timestamp":"2026-01-31 10:22:23"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-31 10:22:23"}
+{"level":"error","message":"You are already a member of this group","method":"POST","path":"/api/v1/groups/697d89831764b47327de6441/join","stack":"Error: You are already a member of this group\n    at C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\src\\middlewares\\groupAccess.middleware.ts:163:13\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)","timestamp":"2026-01-31 10:37:45"}
+{"level":"error","message":"Validation failed","method":"POST","path":"/api/v1/groups/697d8cdec6f6ad3077327e70/join","stack":"Error: Validation failed\n    at C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\src\\controllers\\group.controller.ts:154:11\n    at C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\src\\utils\\asyncHandler.ts:16:21\n    at Layer.handle [as handle_request] (C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\src\\middlewares\\groupAccess.middleware.ts:141:5\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)","timestamp":"2026-01-31 10:46:03"}
+{"level":"warn","message":"⚠️  Mongoose disconnected from DB","timestamp":"2026-01-31 11:17:17"}
+{"level":"info","message":"✅ Mongoose connected to DB","timestamp":"2026-01-31 11:17:27"}
+{"level":"warn","message":"⚠️  Mongoose disconnected from DB","timestamp":"2026-01-31 11:53:23"}
+{"level":"info","message":"✅ Mongoose connected to DB","timestamp":"2026-01-31 11:53:33"}
+{"level":"info","message":"\n⚠️  SIGINT signal received: Closing server gracefully","timestamp":"2026-01-31 11:58:48"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-31 11:58:54"}
+{"level":"info","message":"✅ MongoDB Connected Successfully","timestamp":"2026-01-31 11:58:54"}
+{"level":"info","message":"📦 Database: study-group-db","timestamp":"2026-01-31 11:58:54"}
+{"level":"info","message":"🌐 Host: cluster0-shard-00-01.me7m5.mongodb.net","timestamp":"2026-01-31 11:58:54"}
+{"level":"info","message":"🔌 Port: 27017","timestamp":"2026-01-31 11:58:54"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-31 11:58:54"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-31 11:58:54"}
+{"level":"info","message":"🚀 Server is running in DEVELOPMENT mode","timestamp":"2026-01-31 11:58:54"}
+{"level":"info","message":"📡 Server listening on port 5000","timestamp":"2026-01-31 11:58:54"}
+{"level":"info","message":"🌐 API Base URL: http://localhost:5000/api/v1","timestamp":"2026-01-31 11:58:54"}
+{"level":"info","message":"📊 Health Check: http://localhost:5000/health","timestamp":"2026-01-31 11:58:54"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-31 11:58:54"}
+{"level":"info","message":"\n⚠️  SIGINT signal received: Closing server gracefully","timestamp":"2026-01-31 11:59:17"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-31 11:59:21"}
+{"level":"info","message":"✅ MongoDB Connected Successfully","timestamp":"2026-01-31 11:59:21"}
+{"level":"info","message":"📦 Database: study-group-db","timestamp":"2026-01-31 11:59:21"}
+{"level":"info","message":"🌐 Host: cluster0-shard-00-01.me7m5.mongodb.net","timestamp":"2026-01-31 11:59:21"}
+{"level":"info","message":"🔌 Port: 27017","timestamp":"2026-01-31 11:59:21"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-31 11:59:21"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-31 11:59:21"}
+{"level":"info","message":"🚀 Server is running in DEVELOPMENT mode","timestamp":"2026-01-31 11:59:21"}
+{"level":"info","message":"📡 Server listening on port 5000","timestamp":"2026-01-31 11:59:21"}
+{"level":"info","message":"🌐 API Base URL: http://localhost:5000/api/v1","timestamp":"2026-01-31 11:59:21"}
+{"level":"info","message":"📊 Health Check: http://localhost:5000/health","timestamp":"2026-01-31 11:59:21"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-31 11:59:21"}
+{"level":"info","message":"\n⚠️  SIGINT signal received: Closing server gracefully","timestamp":"2026-01-31 11:59:57"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-31 11:59:59"}
+{"level":"info","message":"✅ MongoDB Connected Successfully","timestamp":"2026-01-31 11:59:59"}
+{"level":"info","message":"📦 Database: study-group-db","timestamp":"2026-01-31 11:59:59"}
+{"level":"info","message":"🌐 Host: cluster0-shard-00-01.me7m5.mongodb.net","timestamp":"2026-01-31 11:59:59"}
+{"level":"info","message":"🔌 Port: 27017","timestamp":"2026-01-31 11:59:59"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-31 11:59:59"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-31 11:59:59"}
+{"level":"info","message":"🚀 Server is running in DEVELOPMENT mode","timestamp":"2026-01-31 11:59:59"}
+{"level":"info","message":"📡 Server listening on port 5000","timestamp":"2026-01-31 11:59:59"}
+{"level":"info","message":"🌐 API Base URL: http://localhost:5000/api/v1","timestamp":"2026-01-31 11:59:59"}
+{"level":"info","message":"📊 Health Check: http://localhost:5000/health","timestamp":"2026-01-31 11:59:59"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-31 11:59:59"}
+{"level":"info","message":"\n⚠️  SIGINT signal received: Closing server gracefully","timestamp":"2026-01-31 12:01:23"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-31 12:08:34"}
+{"level":"info","message":"✅ MongoDB Connected Successfully","timestamp":"2026-01-31 12:08:34"}
+{"level":"info","message":"📦 Database: study-group-db","timestamp":"2026-01-31 12:08:34"}
+{"level":"info","message":"🌐 Host: cluster0-shard-00-00.me7m5.mongodb.net","timestamp":"2026-01-31 12:08:34"}
+{"level":"info","message":"🔌 Port: 27017","timestamp":"2026-01-31 12:08:34"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-31 12:08:34"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-31 12:08:34"}
+{"level":"info","message":"🚀 Server is running in DEVELOPMENT mode","timestamp":"2026-01-31 12:08:34"}
+{"level":"info","message":"📡 Server listening on port 5000","timestamp":"2026-01-31 12:08:34"}
+{"level":"info","message":"🌐 API Base URL: http://localhost:5000/api/v1","timestamp":"2026-01-31 12:08:34"}
+{"level":"info","message":"📊 Health Check: http://localhost:5000/health","timestamp":"2026-01-31 12:08:34"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-31 12:08:34"}
+{"level":"warn","message":"⚠️  Mongoose disconnected from DB","timestamp":"2026-01-31 12:08:55"}
+{"level":"info","message":"✅ Mongoose connected to DB","timestamp":"2026-01-31 12:09:06"}
+{"level":"info","message":"\n⚠️  SIGINT signal received: Closing server gracefully","timestamp":"2026-01-31 12:13:49"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-31 12:13:56"}
+{"level":"info","message":"✅ MongoDB Connected Successfully","timestamp":"2026-01-31 12:13:56"}
+{"level":"info","message":"📦 Database: study-group-db","timestamp":"2026-01-31 12:13:56"}
+{"level":"info","message":"🌐 Host: cluster0-shard-00-02.me7m5.mongodb.net","timestamp":"2026-01-31 12:13:56"}
+{"level":"info","message":"🔌 Port: 27017","timestamp":"2026-01-31 12:13:56"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-31 12:13:56"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-31 12:13:56"}
+{"level":"info","message":"🚀 Server is running in DEVELOPMENT mode","timestamp":"2026-01-31 12:13:56"}
+{"level":"info","message":"📡 Server listening on port 5000","timestamp":"2026-01-31 12:13:56"}
+{"level":"info","message":"🌐 API Base URL: http://localhost:5000/api/v1","timestamp":"2026-01-31 12:13:56"}
+{"level":"info","message":"📊 Health Check: http://localhost:5000/health","timestamp":"2026-01-31 12:13:56"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-31 12:13:56"}
+{"level":"info","message":"\n⚠️  SIGINT signal received: Closing server gracefully","timestamp":"2026-01-31 12:14:41"}
+{"beforeHandshake":false,"cause":{"address":"159.41.181.26","code":"ETIMEDOUT","errno":-4039,"port":27017,"syscall":"connect"},"connectionGeneration":0,"errorLabelSet":{},"level":"error","message":"❌ MongoDB Connection Failed: connect ETIMEDOUT 159.41.181.26:27017","stack":"MongoNetworkError: connect ETIMEDOUT 159.41.181.26:27017\n    at TLSSocket.<anonymous> (C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\node_modules\\mongodb\\src\\cmap\\connect.ts:395:16)\n    at Object.onceWrapper (node:events:633:26)\n    at TLSSocket.emit (node:events:518:28)\n    at TLSSocket.emit (node:domain:489:12)\n    at emitErrorNT (node:internal/streams/destroy:170:8)\n    at emitErrorCloseNT (node:internal/streams/destroy:129:3)\n    at processTicksAndRejections (node:internal/process/task_queues:90:21)","timestamp":"2026-01-31 12:15:07"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-31 12:24:09"}
+{"level":"info","message":"✅ MongoDB Connected Successfully","timestamp":"2026-01-31 12:24:09"}
+{"level":"info","message":"📦 Database: study-group-db","timestamp":"2026-01-31 12:24:09"}
+{"level":"info","message":"🌐 Host: cluster0-shard-00-02.me7m5.mongodb.net","timestamp":"2026-01-31 12:24:09"}
+{"level":"info","message":"🔌 Port: 27017","timestamp":"2026-01-31 12:24:09"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-31 12:24:09"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-31 12:24:09"}
+{"level":"info","message":"🚀 Server is running in DEVELOPMENT mode","timestamp":"2026-01-31 12:24:09"}
+{"level":"info","message":"📡 Server listening on port 5000","timestamp":"2026-01-31 12:24:09"}
+{"level":"info","message":"🌐 API Base URL: http://localhost:5000/api/v1","timestamp":"2026-01-31 12:24:09"}
+{"level":"info","message":"📊 Health Check: http://localhost:5000/health","timestamp":"2026-01-31 12:24:09"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-31 12:24:09"}
+{"level":"info","message":"📋 Available Routes:","timestamp":"2026-01-31 12:24:09"}
+{"level":"info","message":"   Auth: /api/v1/auth","timestamp":"2026-01-31 12:24:09"}
+{"level":"info","message":"   Groups: /api/v1/groups","timestamp":"2026-01-31 12:24:09"}
+{"level":"info","message":"   Members: /api/v1/groups/:groupId/join","timestamp":"2026-01-31 12:24:09"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-31 12:24:09"}
+{"level":"error","message":"You are already a member of this group","method":"POST","path":"/api/v1/groups/697d89831764b47327de6441/join","stack":"Error: You are already a member of this group\n    at C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\src\\middlewares\\groupAccess.middleware.ts:163:13\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)","timestamp":"2026-01-31 12:24:17"}
+{"level":"error","message":"You are already a member of this group","method":"POST","path":"/api/v1/groups/697d89831764b47327de6441/join","stack":"Error: You are already a member of this group\n    at C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\src\\middlewares\\groupAccess.middleware.ts:163:13\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)","timestamp":"2026-01-31 12:25:58"}
+{"level":"error","message":"Invalid token","method":"POST","path":"/api/v1/groups/697d89831764b47327de6441/add-member","stack":"Error: Invalid token\n    at C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\src\\middlewares\\auth.middleware.ts:73:15\n    at C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\src\\utils\\asyncHandler.ts:16:21\n    at Layer.handle [as handle_request] (C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\node_modules\\express\\lib\\router\\index.js:284:15\n    at param (C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\node_modules\\express\\lib\\router\\index.js:365:14)\n    at param (C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\node_modules\\express\\lib\\router\\index.js:376:14)\n    at Function.process_params (C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\node_modules\\express\\lib\\router\\index.js:421:3)","timestamp":"2026-01-31 12:27:20"}
+{"level":"error","message":"Invalid token","method":"POST","path":"/api/v1/groups/697d89831764b47327de6441/add-member","stack":"Error: Invalid token\n    at C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\src\\middlewares\\auth.middleware.ts:73:15\n    at C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\src\\utils\\asyncHandler.ts:16:21\n    at Layer.handle [as handle_request] (C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\node_modules\\express\\lib\\router\\index.js:284:15\n    at param (C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\node_modules\\express\\lib\\router\\index.js:365:14)\n    at param (C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\node_modules\\express\\lib\\router\\index.js:376:14)\n    at Function.process_params (C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\node_modules\\express\\lib\\router\\index.js:421:3)","timestamp":"2026-01-31 12:28:03"}
+{"level":"error","message":"Invalid token","method":"POST","path":"/api/v1/groups/697d89831764b47327de6441/add-member","stack":"Error: Invalid token\n    at C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\src\\middlewares\\auth.middleware.ts:73:15\n    at C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\src\\utils\\asyncHandler.ts:16:21\n    at Layer.handle [as handle_request] (C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\node_modules\\express\\lib\\router\\index.js:284:15\n    at param (C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\node_modules\\express\\lib\\router\\index.js:365:14)\n    at param (C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\node_modules\\express\\lib\\router\\index.js:376:14)\n    at Function.process_params (C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\node_modules\\express\\lib\\router\\index.js:421:3)","timestamp":"2026-01-31 12:28:44"}
+{"level":"error","message":"Invalid token","method":"POST","path":"/api/v1/groups/697d89831764b47327de6441/add-member","stack":"Error: Invalid token\n    at C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\src\\middlewares\\auth.middleware.ts:73:15\n    at C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\src\\utils\\asyncHandler.ts:16:21\n    at Layer.handle [as handle_request] (C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\node_modules\\express\\lib\\router\\index.js:284:15\n    at param (C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\node_modules\\express\\lib\\router\\index.js:365:14)\n    at param (C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\node_modules\\express\\lib\\router\\index.js:376:14)\n    at Function.process_params (C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\node_modules\\express\\lib\\router\\index.js:421:3)","timestamp":"2026-01-31 12:28:47"}
+{"level":"info","message":"\n⚠️  SIGINT signal received: Closing server gracefully","timestamp":"2026-01-31 12:28:54"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-31 12:29:02"}
+{"level":"info","message":"✅ MongoDB Connected Successfully","timestamp":"2026-01-31 12:29:02"}
+{"level":"info","message":"📦 Database: study-group-db","timestamp":"2026-01-31 12:29:02"}
+{"level":"info","message":"🌐 Host: cluster0-shard-00-00.me7m5.mongodb.net","timestamp":"2026-01-31 12:29:02"}
+{"level":"info","message":"🔌 Port: 27017","timestamp":"2026-01-31 12:29:02"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-31 12:29:02"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-31 12:29:02"}
+{"level":"info","message":"🚀 Server is running in DEVELOPMENT mode","timestamp":"2026-01-31 12:29:02"}
+{"level":"info","message":"📡 Server listening on port 5000","timestamp":"2026-01-31 12:29:02"}
+{"level":"info","message":"🌐 API Base URL: http://localhost:5000/api/v1","timestamp":"2026-01-31 12:29:02"}
+{"level":"info","message":"📊 Health Check: http://localhost:5000/health","timestamp":"2026-01-31 12:29:02"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-31 12:29:02"}
+{"level":"info","message":"📋 Available Routes:","timestamp":"2026-01-31 12:29:02"}
+{"level":"info","message":"   Auth: /api/v1/auth","timestamp":"2026-01-31 12:29:02"}
+{"level":"info","message":"   Groups: /api/v1/groups","timestamp":"2026-01-31 12:29:02"}
+{"level":"info","message":"   Members: /api/v1/groups/:groupId/join","timestamp":"2026-01-31 12:29:02"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-31 12:29:02"}
+{"level":"error","message":"Invalid token","method":"POST","path":"/api/v1/groups/697d89831764b47327de6441/add-member","stack":"Error: Invalid token\n    at C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\src\\middlewares\\auth.middleware.ts:73:15\n    at C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\src\\utils\\asyncHandler.ts:16:21\n    at Layer.handle [as handle_request] (C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\node_modules\\express\\lib\\router\\route.js:119:3)\n    at Layer.handle [as handle_request] (C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\node_modules\\express\\lib\\router\\index.js:284:15\n    at param (C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\node_modules\\express\\lib\\router\\index.js:365:14)\n    at param (C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\node_modules\\express\\lib\\router\\index.js:376:14)\n    at Function.process_params (C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\node_modules\\express\\lib\\router\\index.js:421:3)","timestamp":"2026-01-31 12:29:11"}
+{"level":"info","message":"\n⚠️  SIGINT signal received: Closing server gracefully","timestamp":"2026-01-31 12:31:03"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-31 12:31:10"}
+{"level":"info","message":"✅ MongoDB Connected Successfully","timestamp":"2026-01-31 12:31:10"}
+{"level":"info","message":"📦 Database: study-group-db","timestamp":"2026-01-31 12:31:10"}
+{"level":"info","message":"🌐 Host: cluster0-shard-00-00.me7m5.mongodb.net","timestamp":"2026-01-31 12:31:10"}
+{"level":"info","message":"🔌 Port: 27017","timestamp":"2026-01-31 12:31:10"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-31 12:31:10"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-31 12:31:10"}
+{"level":"info","message":"🚀 Server is running in DEVELOPMENT mode","timestamp":"2026-01-31 12:31:10"}
+{"level":"info","message":"📡 Server listening on port 5000","timestamp":"2026-01-31 12:31:10"}
+{"level":"info","message":"🌐 API Base URL: http://localhost:5000/api/v1","timestamp":"2026-01-31 12:31:10"}
+{"level":"info","message":"📊 Health Check: http://localhost:5000/health","timestamp":"2026-01-31 12:31:10"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-31 12:31:10"}
+{"level":"info","message":"📋 Available Routes:","timestamp":"2026-01-31 12:31:10"}
+{"level":"info","message":"   Auth: /api/v1/auth","timestamp":"2026-01-31 12:31:10"}
+{"level":"info","message":"   Groups: /api/v1/groups","timestamp":"2026-01-31 12:31:10"}
+{"level":"info","message":"   Members: /api/v1/groups/:groupId/join","timestamp":"2026-01-31 12:31:10"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-31 12:31:10"}
+{"level":"error","message":"Invalid email or password","method":"POST","path":"/api/v1/auth/login","stack":"Error: Invalid email or password\n    at Object.loginUser (C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\src\\services\\auth.service.ts:91:11)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\src\\controllers\\auth.controller.ts:55:24","timestamp":"2026-01-31 12:31:13"}
+{"level":"info","message":"\n⚠️  SIGINT signal received: Closing server gracefully","timestamp":"2026-01-31 12:32:14"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-31 12:32:20"}
+{"level":"info","message":"✅ MongoDB Connected Successfully","timestamp":"2026-01-31 12:32:20"}
+{"level":"info","message":"📦 Database: study-group-db","timestamp":"2026-01-31 12:32:20"}
+{"level":"info","message":"🌐 Host: cluster0-shard-00-02.me7m5.mongodb.net","timestamp":"2026-01-31 12:32:20"}
+{"level":"info","message":"🔌 Port: 27017","timestamp":"2026-01-31 12:32:20"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-31 12:32:20"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-31 12:32:20"}
+{"level":"info","message":"🚀 Server is running in DEVELOPMENT mode","timestamp":"2026-01-31 12:32:20"}
+{"level":"info","message":"📡 Server listening on port 5000","timestamp":"2026-01-31 12:32:20"}
+{"level":"info","message":"🌐 API Base URL: http://localhost:5000/api/v1","timestamp":"2026-01-31 12:32:20"}
+{"level":"info","message":"📊 Health Check: http://localhost:5000/health","timestamp":"2026-01-31 12:32:20"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-31 12:32:20"}
+{"level":"info","message":"📋 Available Routes:","timestamp":"2026-01-31 12:32:20"}
+{"level":"info","message":"   Auth: /api/v1/auth","timestamp":"2026-01-31 12:32:20"}
+{"level":"info","message":"   Groups: /api/v1/groups","timestamp":"2026-01-31 12:32:20"}
+{"level":"info","message":"   Members: /api/v1/groups/:groupId/join","timestamp":"2026-01-31 12:32:20"}
+{"level":"info","message":"==================================================","timestamp":"2026-01-31 12:32:20"}
+{"level":"warn","message":"⚠️  Mongoose disconnected from DB","timestamp":"2026-01-31 12:32:42"}
+{"level":"info","message":"✅ Mongoose connected to DB","timestamp":"2026-01-31 12:32:52"}
+{"level":"error","message":"Cast to ObjectId failed for value \"697d8bd0c6f6ad307732e58\" (type string) at path \"_id\" for model \"User\"","method":"POST","path":"/api/v1/groups/697d89831764b47327de6441/add-member","stack":"CastError: Cast to ObjectId failed for value \"697d8bd0c6f6ad307732e58\" (type string) at path \"_id\" for model \"User\"\n    at SchemaObjectId.cast (C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\node_modules\\mongoose\\lib\\schema\\objectId.js:253:11)\n    at SchemaObjectId.SchemaType.applySetters (C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\node_modules\\mongoose\\lib\\schemaType.js:1288:12)\n    at SchemaObjectId.SchemaType.castForQuery (C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\node_modules\\mongoose\\lib\\schemaType.js:1724:17)\n    at cast (C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\node_modules\\mongoose\\lib\\cast.js:390:32)\n    at model.Query.Query.cast (C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\node_modules\\mongoose\\lib\\query.js:5060:12)\n    at model.Query.Query._castConditions (C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\node_modules\\mongoose\\lib\\query.js:2374:10)\n    at model.Query._findOne (C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\node_modules\\mongoose\\lib\\query.js:2697:8)\n    at model.Query.exec (C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\node_modules\\mongoose\\lib\\query.js:4627:80)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async C:\\Users\\sharm\\Desktop\\New folder\\study-group-backend\\src\\controllers\\member.controller.ts:215:20","timestamp":"2026-01-31 12:33:36"}
+{"level":"info","message":"\n⚠️  SIGINT signal received: Closing server gracefully","timestamp":"2026-01-31 12:41:48"}

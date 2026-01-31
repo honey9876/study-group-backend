@@ -18,27 +18,38 @@ import {
 const router = Router();
 
 /**
+ * IMPORTANT: Specific routes MUST come BEFORE dynamic routes
+ * Order matters in Express routing!
+ */
+
+/**
  * Public/Optional Auth Routes
  */
 
 // Get all groups (public, but shows more info if authenticated)
 router.get('/', optionalAuth, groupController.getGroups);
 
+/**
+ * Protected Routes (Authentication Required)
+ * MUST be before dynamic :groupId routes
+ */
+
+// Get user's groups - SPECIFIC ROUTE FIRST
+router.get('/my-groups', authenticate, groupController.getMyGroups);
+
+// Create a new group
+router.post('/', authenticate, groupController.createGroup);
+
+/**
+ * Dynamic Routes with :groupId parameter
+ * MUST come AFTER all specific routes
+ */
+
 // Get group by ID (public for public groups, private for members only)
 router.get('/:groupId', optionalAuth, groupController.getGroupById);
 
 // Get group members (public for public groups)
 router.get('/:groupId/members', optionalAuth, groupController.getGroupMembers);
-
-/**
- * Protected Routes (Authentication Required)
- */
-
-// Create a new group
-router.post('/', authenticate, groupController.createGroup);
-
-// Get user's groups
-router.get('/my-groups', authenticate, groupController.getMyGroups);
 
 // Update group (leader only)
 router.put('/:groupId', authenticate, isLeader, groupController.updateGroup);
@@ -59,4 +70,3 @@ router.post(
 router.post('/:groupId/leave', authenticate, isMember, groupController.leaveGroup);
 
 export default router;
-
